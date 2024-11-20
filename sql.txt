@@ -1,0 +1,13 @@
+SELECT 
+    employee_id,
+    first_name,
+    last_name,
+    salary,
+    CASE 
+        WHEN job_id IN ("FI_ACCOUNT", "AC_ACCOUNT") THEN 1
+        ELSE 0
+    END AS Accountant
+FROM 
+    employees
+ORDER BY 
+    employee_id ASC;
